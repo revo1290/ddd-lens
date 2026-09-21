@@ -1,0 +1,32 @@
+name: Rule proposal
+description: DDD評価ルールの追加・変更を提案する
+title: "[rule] "
+labels: ["rule-proposal"]
+body:
+  - type: textarea
+    id: concept
+    attributes:
+      label: 対象となるDDD概念と根拠
+      description: 一次資料または公式資料へのリンクを含めてください。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 観測可能な証拠
+      description: コード、テスト、文書、履歴の何を検出しますか。
+    validations:
+      required: true
+  - type: textarea
+    id: false-positives
+    attributes:
+      label: 誤検知・見逃し
+      description: どの構成で誤る可能性がありますか。
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: 最小の正例・反例
+    validations:
+      required: true

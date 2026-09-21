@@ -1,0 +1,5 @@
+# Security Policy
+
+脆弱性は公開Issueに詳細を書かず、GitHubのPrivate vulnerability reportingを使用してください。
+
+CLIは解析対象を外部送信しません。レポートには一致行の一部が含まれるため、共有前に機密情報がないことを確認してください。

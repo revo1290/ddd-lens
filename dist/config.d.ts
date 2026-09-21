@@ -1,0 +1,7 @@
+import type { LensConfig } from "./types.js";
+export declare function loadConfig(root: string, explicitPath?: string): Promise<{
+    config: LensConfig;
+    path?: string;
+}>;
+export declare const CONFIG_TEMPLATE = "# ddd-lens \u8A2D\u5B9A\u30D5\u30A1\u30A4\u30EB\n# 0=\u4E0D\u5728/\u6709\u5BB3, 1=\u540D\u79F0\u3060\u3051, 2=\u90E8\u5206\u9069\u7528, 3=\u4E00\u8CAB\u3057\u3066\u904B\u7528, 4=\u8A08\u6E2C\u3057\u7D99\u7D9A\u6539\u5584\nversion: 1\nlocale: ja\nproject:\n  name: \"your-project\"\n\n# DDD\u3092\u63A1\u7528\u3059\u308B\u59A5\u5F53\u6027\u3002\u9069\u7528\u5EA6\u30B9\u30B3\u30A2\u3068\u306F\u5206\u96E2\u3057\u3066\u6271\u3044\u307E\u3059\u3002\nfit:\n  businessRuleComplexity: null\n  differentiation: null\n  changeFrequency: null\n  integrationComplexity: null\n  domainExpertAccess: null\n\nscan:\n  exclude:\n    - \"**/generated/**\"\n  maxFiles: 5000\n  maxFileBytes: 524288\n\n# \u81EA\u52D5\u691C\u51FA\u3067\u306F\u5224\u65AD\u3067\u304D\u306A\u3044\u9805\u76EE\u3092\u3001\u6839\u62E0\u4ED8\u304D\u3067\u88DC\u5B8C\u3057\u307E\u3059\u3002\n# assessment:\n#   strategy.bounded-contexts:\n#     score: 3\n#     confidence: high\n#     rationale: \"\u5404\u30B3\u30F3\u30C6\u30AD\u30B9\u30C8\u306E\u8CAC\u4EFB\u3068\u30C1\u30FC\u30E0\u6240\u6709\u8005\u3092\u56DB\u534A\u671F\u3054\u3068\u306B\u898B\u76F4\u3059\"\n#     evidence:\n#       - kind: workshop\n#         path: \"docs/context-map.md\"\n#         note: \"2026-09\u306E\u30E2\u30C7\u30EA\u30F3\u30B0\u4F1A\u3067\u5408\u610F\"\n";
+//# sourceMappingURL=config.d.ts.map

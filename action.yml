@@ -1,0 +1,39 @@
+name: "DDD Lens"
+description: "Evidence-based DDD fitness assessment with Japanese-first reports"
+author: "revo1290"
+inputs:
+  path:
+    description: "Repository path to scan"
+    required: false
+    default: "."
+  format:
+    description: "text, markdown, json, or sarif"
+    required: false
+    default: "text"
+  output:
+    description: "Output file path; empty writes to the job log"
+    required: false
+    default: ""
+  fail-on:
+    description: "critical, high, medium, low, or never"
+    required: false
+    default: "never"
+runs:
+  using: "composite"
+  steps:
+    - name: Run DDD Lens
+      shell: bash
+      env:
+        DDD_LENS_PATH: ${{ inputs.path }}
+        DDD_LENS_FORMAT: ${{ inputs.format }}
+        DDD_LENS_OUTPUT: ${{ inputs.output }}
+        DDD_LENS_FAIL_ON: ${{ inputs.fail-on }}
+      run: |
+        args=(scan "$DDD_LENS_PATH" --format "$DDD_LENS_FORMAT" --fail-on "$DDD_LENS_FAIL_ON")
+        if [[ -n "$DDD_LENS_OUTPUT" ]]; then
+          args+=(--output "$DDD_LENS_OUTPUT")
+        fi
+        node "$GITHUB_ACTION_PATH/dist/cli.js" "${args[@]}"
+branding:
+  icon: "search"
+  color: "purple"

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use ddd-lens in research or an internal method, please cite this repository."
+title: "ddd-lens"
+type: software
+authors:
+  - alias: "revo1290"
+version: 0.1.0
+date-released: 2026-09-21
+license: Apache-2.0
+repository-code: "https://github.com/revo1290/ddd-lens"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "DDD Lens Review"
+  short_description: "根拠と確信度を明示してDDD適用状況を率直に評価する"
+  default_prompt: "Use $review-ddd to assess this project’s DDD fit, evidence, risks, and highest-priority improvements."

@@ -1,0 +1,19 @@
+version: 1
+locale: ja
+project:
+  name: "your-project"
+
+fit:
+  businessRuleComplexity: null
+  differentiation: null
+  changeFrequency: null
+  integrationComplexity: null
+  domainExpertAccess: null
+
+scan:
+  exclude:
+    - "**/generated/**"
+  maxFiles: 5000
+  maxFileBytes: 524288
+
+assessment: {}
